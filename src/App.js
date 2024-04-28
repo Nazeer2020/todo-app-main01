@@ -39,9 +39,9 @@ function Header({ themHandle, them }) {
     <div className="header">
       <h1>TODO</h1>
       {them === "light" ? (
-        <img onClick={themHandle} src="/images/icon-moon.svg" alt="icon" />
+        <img onClick={themHandle} src="assests/images/icon-moon.svg" alt="icon" />
       ) : (
-        <img onClick={themHandle} src="/images/icon-sun.svg" alt="icon" />
+        <img onClick={themHandle} src="assests/images/icon-sun.svg" alt="icon" />
       )}
     </div>
   );
