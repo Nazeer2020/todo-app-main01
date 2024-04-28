@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --clr-accent-500: hsl(12, 60%, 45%);
+  --clr-accent-400: hsl(12, 88%, 59%);
+  --clr-accent-300: hsl(12, 88%, 75%);
+  --clr-accent-100: hsl(13, 100%, 96%);
+
+  --clr-primary-100: hsl(220, 98%, 61%);
+  --clr-primary-200: hsl(192, 100%, 67%);
+  --clr-primary-300: hsl(280, 87%, 65%);
+
+  --clr-neutral-900: hsl(237, 14%, 26%);
+  --clr-neutral-800: hsl(233, 14%, 35%);
+  --clr-neutral-700: hsl(234, 11%, 52%);
+  --clr-neutral-500: hsl(236, 33%, 92%);
+  --clr-neutral-600: hsl(234, 39%, 85%);
+  --clr-neutral-1000: hsl(235, 24%, 19%);
+  --clr-neutral-1100: hsl(235, 21%, 11%);
+  --clr-neutral-400: hsl(235, 19%, 35%);
+  --clr-neutral-200: hsl(236, 9%, 61%);
+  --clr-neutral-200: hsl(236, 33%, 92%);
+  --clr-neutral-100: hsl(0, 0%, 98%);
+
+  --ff-primary: "Josefin Sans", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-body: var(--fs-500);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+
+    --fs-nav: var(--fs-300);
+  }
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+
+.App {
+  background-color: var(--clr-neutral-1100);
+  background-image: url('../public/images/bg-mobile-dark.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  height: 100dvh;
+}
+
+@media  (min-width: 500px){
+  .App {
+    background-image: url('../public/images/bg-desktop-dark.jpg');
+    background-size: 100% 30%;
+  }
+}
+
+.container {
+  padding: var(--size-700) var(--size-500);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clr-accent-100);
+}
+
+h1 {
+  letter-spacing: var(--size-200);
+  font-size: var(--fs-700);
+}
+
+img {
+  cursor: pointer;
+}
+
+.text-input {
+  background-color: var(--clr-neutral-1000);
+  margin-block: var(--size-300);
+  width: 100%;
+  height: var(--size-700);
+  border: none;
+  color: var(--clr-neutral-700);
+  padding: var(--size-400);
+}
+
+.list {
+  
+  background-color: var(--clr-neutral-1000);
+}
+
+.item {
+  display: flex;
+  padding: var(--size-300);
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.item:nth-child(n + 2)::after {
+  content: "";
+  position: absolute;
+  
+  inset: 0;
+  height: 0.079px;
+  background-color: var(--clr-neutral-700);
+  
+}
+
+
+.checkbox {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  height: var(--size-500);
+  width: var(--size-500);
+  border: 1px solid var(--clr-neutral-700);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:checked{
+  background: linear-gradient(to right,var(--clr-primary-100), var(--clr-primary-300));
+}
+
+.checkbox:checked:after {
+  content: url("../public/images/icon-check.svg");
+
+}
+
+
+li {
+  margin-inline-start: var(--size-300);
+  list-style-type: none;
+  color: var(--clr-neutral-600);
+  
+  
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clr-neutral-700);
+  padding: var(--size-300);
+}
+
+.filter {
+  margin-block-start: var(--size-300);
+  background-color: var(--clr-neutral-1000);
+  justify-content: space-around;
+}
+
+.filter,
+.text-input,
+.list {
+  border-radius: var(--size-100);
+}
+
+.text-input:focus {
+  outline:  none;
+}
+
+.filter,
+.list {
+  box-shadow: 0 0 var(--size-100) var(--clr-neutral-1100);
+}
+
+.footer {
+  color: var(--clr-neutral-700);
+  margin-block-start: var(--size-700);
+  text-align: center;
+}
+
+
+
+@media (min-width:500px) {
+  .filter {
+    margin-block-start: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0.79px solid var(--clr-neutral-700) ;
+  }
+
+  .list {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  }
+
+ 
+
+    
+}
+
+
+/* light mode */
+
+.App_light {
+  background-color: var(--clr-neutral-100);
+  background-image: url('../public/images/bg-mobile-light.jpg');
+  background-repeat: no-repeat;
+}
+
+
+@media (min-width: 500px) {
+  .App_light {
+    background-image: url('../public/images/bg-desktop-light.jpg');
+    background-size: 100% 30%;
+  }
+}
+
+.text-input_light,
+.filter_light,
+.summary_light,
+.list_light {
+
+  background-color: #fff;
+}
+
+.filter_light {
+  color: var(--clr-neutral-600);
+}
+
+.filter_light,
+.list_light {
+  box-shadow: 0 0 var(--size-100) var(--clr-neutral-100);
+}
+
+.item_light {
+  color: var(--clr-neutral-700);
+}

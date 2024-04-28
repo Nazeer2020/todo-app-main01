@@ -1,0 +1,59 @@
+{
+  "name": "todo-app-main",
+  "version": "0.1.0",
+  "homepage": "https://your-github-username.github.io/todo-app-main01",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.10",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.1.1",
+    "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dom": "^18.2.0",
+    "react-responsive": "^10.0.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nazeer2020/todo-app-main01.git"
+  },
+  "author": "Nazeer",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build --repo=<https://github.com/Nazeer2020/todo-app-main01>"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "bugs": {
+    "url": "https://github.com/your-github-Nazeer2020/todo-app-main01/issues"
+  },
+  "main": "index.js",
+  "devDependencies": {}
+}
